@@ -1,0 +1,36 @@
+# site settings
+title: ACPYSS
+subtitle: Python San Sebastian
+email: info@pyss.org
+description: Python San Sebastian Society website
+baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+url: http://www.pyss.org # the base hostname & protocol for your site
+author:
+street_address: P. Manuel Lardizabal 1, Of 307
+city: San Sebastian
+state: Gipuzkoa
+zip_code: 20018
+country: Spain
+phone:
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url:
+github_url:
+gitlab_url:
+googleplus_url:
+instagram_url: https://www.linkedin.com/company/11693780/
+linkedin_url: https://www.linkedin.com/
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/acpyss
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed

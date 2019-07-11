@@ -22,7 +22,7 @@ script:
 
 after_success:
   - cd output
-  - find . -type f -exec curl -u $USER:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/public/{} \;
+  - find . -type f -exec curl -u $USERNAME:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/{} \;
 
 
 notifications:

@@ -3,7 +3,7 @@ title: ACPYSS
 subtitle: Python San Sebastian
 email: info@pyss.org
 description: Python San Sebastian Society website
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: http://www.pyss.org # the base hostname & protocol for your site
 author:
 street_address: P. Manuel Lardizabal 1, Of 307

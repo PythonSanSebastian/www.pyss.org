@@ -1,31 +1,30 @@
-language: ruby
-rvm:
-  - 2.3.1
-
-install:
-  - bundle install
-  - gem install jekyll
-  - gem install jekyll-sitemap
-  - gem install emoji_for_jekyll
-
-branches:
-  only:
-    - master
-
-env:
-  global:
-    - JEKYLL_ENV=production
-
-script:
-  - chmod +x _scripts/build.sh
-  - _scripts/build.sh
-
-after_success:
-  - chmod +x _scripts/deploy.sh
-  - _scripts/deploy.sh
-
+# Travis CI config for automated Nikola blog deployments
+language: python
+cache: apt
 sudo: false
 addons:
   apt:
     packages:
       - ncftp
+
+branches:
+  only:
+  - master
+  
+python:
+  - 3.7
+
+install:
+  - pip install -r requirements.txt
+  - pip install -U --upgrade-strategy=eager 'Nikola[extras]'
+script:
+  - cd www.pyss.org
+  - nikola build
+
+after_success:
+  - ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" "$HOST" /output .
+
+notifications:
+    email:
+        on_success: change
+        on_failure: always

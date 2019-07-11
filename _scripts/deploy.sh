@@ -6,4 +6,4 @@
 #    ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" "$HOST" . .
 #fi
 
-ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" "$HOST" . _site
+ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" "$HOST" . ./_site

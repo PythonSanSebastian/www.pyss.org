@@ -22,7 +22,8 @@ script:
 
 after_success:
   - cd output
-  - ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" "$HOST" ./ ./
+  - find . -type f -exec curl -u $USER:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/{} \;
+
 
 notifications:
     email:

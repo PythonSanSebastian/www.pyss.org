@@ -20,12 +20,14 @@ install:
 script:
   - cd www.pyss.org
   - nikola build
-  - cd output
+#  - cd output
 
 #after_success:
 #  - cd output
 #  - find . -type f -exec curl -u $USERNAME:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/{} \;
 
+after_succes:
+  - cd output
 
 deploy:
   provider: pages

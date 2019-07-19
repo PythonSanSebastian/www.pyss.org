@@ -26,8 +26,8 @@ script:
 #  - cd output
 #  - find . -type f -exec curl -u $USERNAME:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/{} \;
 
-after_succes:
-  - cd output
+before_deploy::
+  - cd www.pyss.org/output
 
 deploy:
   provider: pages

@@ -20,6 +20,7 @@ install:
 script:
   - cd www.pyss.org
   - nikola build
+  - pwd
 
 #after_success:
 #  - cd output

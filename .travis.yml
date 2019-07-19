@@ -2,10 +2,11 @@
 language: python
 cache: apt
 sudo: false
-addons:
-  apt:
-    packages:
-      - ncftp
+
+#addons:
+#  apt:
+#    packages:
+#      - ncftp
 
 branches:
   only:
@@ -24,19 +25,19 @@ script:
 #  - cd output
 #  - find . -type f -exec curl -u $USERNAME:$PASSWORD --ftp-create-dirs -T {} ftp://$URL/{} \;
 
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  local_dir: ./output
+  local_dir: output/
   repo: PythonSanSebastian/PythonSanSebastian.github.io
-  target_branch: test
   on:
     branch: master
 
 
-notifications:
-    email:
-        on_success: change
-        on_failure: always
+#notifications:
+#    email:
+#        on_success: change
+#        on_failure: always

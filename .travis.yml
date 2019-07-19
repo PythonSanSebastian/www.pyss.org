@@ -33,6 +33,7 @@ deploy:
   keep_history: true
   local_dir: www.pyss.org/output
   repo: PythonSanSebastian/PythonSanSebastian.github.io
+  target_branch: master
   on:
     branch: master
 

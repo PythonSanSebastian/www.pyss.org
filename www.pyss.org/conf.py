@@ -25,7 +25,7 @@ SITE_URL = "http://www.pyss.org/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://www.pyss.org/"
-BLOG_EMAIL = "n.tesla@example.com"
+BLOG_EMAIL = "oier@pyss.org"
 BLOG_DESCRIPTION = "Python San Sebastian"  # (translatable)
 
 # Nikola is multilingual!
@@ -134,18 +134,38 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        #("/archive.html", "Archive"),
+        #("/categories/", "Tags"),
+        #("/rss.xml", "RSS feed"),
+        (
+
+            (
+                ("/about", "About"),
+                ("/bylaws", "Bylaws"),
+
+            ),
+            'About'
+        ),
+        ("/events", "Events and conferences"),
+        ("/contact", "Contact"),
+
+        (
+            (
+                ("https://twitter.com/acpyss", 'Twitter'),
+                ("https://www.facebook.com/acpyss/", 'Facebook'),
+                ('https://t.me/joinchat/AFTPTz9n5ObNwFFRVmkuKw', 'Telegram group')
+            ),
+            'Social'
+        ),
     ),
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "pyss"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#4B8BBE'
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 # (translatable)
@@ -187,9 +207,17 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "story.tmpl"),
-    ("pages/*.txt", "pages", "story.tmpl"),
-    ("pages/*.html", "pages", "story.tmpl"),
+    ("pages/index.rst", "", "index.tmpl"),
+    ("pages/*.rst", "", "story.tmpl"),
+    ("pages/*.txt", "", "story.tmpl"),
+    ("pages/*.html", "", "story.tmpl"),
+
+)
+
+EVENTS = (
+    ("events/*.rst", "events", "story.tmpl"),
+    ("events/*.txt", "events", "story.tmpl"),
+    ("events/*.html", "events", "story.tmpl"),
 )
 
 
@@ -507,7 +535,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+INDEX_PATH = "pages"
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -889,7 +917,7 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license} - Page source code on <a href="https://github.com/PythonSanSebastian/www.pyss.org" rel="nofollow">Github</a> '
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1227,11 +1255,15 @@ UNSLUGIFY_TITLES = True
 #     # 'site': '@website',         # twitter nick for the website
 #     # 'creator': '@username',     # Username for the content creator / author.
 # }
+TWITTER_CARD = {
+    'use_twitter_cards': True,  # enable Twitter Cards
+    'site': '@acpyss',  # twitter nick for the website
+}
 
 # If webassets is installed, bundle JS and CSS into single files to make
 # site loading faster in a HTTP/1.1 environment but is not recommended for
 # HTTP/2.0 when caching is used. Defaults to True.
-# USE_BUNDLES = True
+USE_BUNDLES = True
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]

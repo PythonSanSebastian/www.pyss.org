@@ -1,0 +1,4 @@
+Sitemap: http://www.pyss.org/sitemapindex.xml
+
+User-Agent: *
+Host: www.pyss.org

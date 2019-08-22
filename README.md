@@ -6,7 +6,7 @@ This repository is the official website of Python San Sebastian Society
 # Contribute
 Feel free to PR any updates.
  - Fixes, typos...
- - Language support (Prefferred: Spannish and Basque)
+ - Language support (Preferred: Spannish and Basque)
  - Event updates (New events, Changes...)
  
  ## Contributing throught issues

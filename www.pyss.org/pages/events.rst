@@ -15,16 +15,20 @@ Check our `ti.to page <https://ti.to/acpyss/>`_ for registration informations
 
 .. class:: shadow p-3 mb-5 bg-light rounded
 
-  EuroScipy 2019 Bilbao
+  EuroScipy 2020 Bilbao
     - European conference in Python and Science
     - Bizkaia Aretoa, Bilbao
-    - 2-6 September 2019
-    - (`more info <https://www.euroscipy.org/2019/>`_)
+    - 27-31 July 2020
+    - (`more info <https://www.euroscipy.org/2020/>`_)
 
 
 ================
 Past events
 ================
+
+*2019*
+
+- EuroSciPy 2019 (euroscipy19_)
 
 *2018*
 
@@ -64,3 +68,4 @@ Past events
 .. _euroscipy2019: https://www.euroscipy.org/2019/
 .. _scw2015:
 .. _scwlund2016: https://alexsavio.github.io/2016-05-25-lunduni/
+.. _euroscipy19: https://www.euroscipy.org/2019/

@@ -13,7 +13,7 @@ Nikola==7.8.5
 olefile==0.44
 piexif==1.0.12
 Pillow==4.1.1
-Pygments==2.2.0
+Pygments==2.7.4
 PyRSS2Gen==1.1
 python-dateutil==2.6.0
 requests==2.20.0

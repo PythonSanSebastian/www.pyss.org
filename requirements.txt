@@ -12,7 +12,7 @@ natsort==5.0.3
 Nikola==7.8.5
 olefile==0.44
 piexif==1.0.12
-Pillow==4.1.1
+Pillow==9.3.0
 Pygments==2.2.0
 PyRSS2Gen==1.1
 python-dateutil==2.6.0
